@@ -1,6 +1,13 @@
 import React from "react";
+
+// PACKAGES
 import { useSelector, useDispatch } from "react-redux";
+import Today from "../today/Today";
+
+// COMPONENTS
+import Yesterday from "../yesterday/Yesterday";
 import { GLOBALTYPES } from "./../../redux/actions/globalTypes";
+import "./Tab.css";
 
 const Tab = () => {
   const { tab } = useSelector((state) => state);
@@ -46,10 +53,12 @@ const Tab = () => {
             Last hour
           </div>
 
-          <div className={tab === 2 ? "activecontent" : "content"}>Today</div>
+          <div className={tab === 2 ? "activecontent" : "content"}>
+            <Today />
+          </div>
 
           <div className={tab === 3 ? "activecontent" : "content"}>
-            Yesterday
+            <Yesterday />
           </div>
 
           <div className={tab === 4 ? "activecontent" : "content"}>

@@ -2,6 +2,7 @@ import React from "react";
 
 // COMPONENTS
 import Tab from "./../tab/Tab";
+import "./Main.css";
 
 const Main = () => {
   return (

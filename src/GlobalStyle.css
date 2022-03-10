@@ -15,6 +15,7 @@ body {
   /* colors */
   --whiteColor: #fff;
   --primaryColor: #2196f3;
+  --blueColor: #5856d5;
   --secondaryColor: #ff6a67;
   --tetiaryColor: #ffcc00;
   --blackColor: #4a4a4a;
@@ -30,13 +31,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  /* height: 100vh; */
+  padding: 40px 0;
 }
-
-/* Linking styles globally */
-
-/* ----------- The main component ------------- */
-@import url("./components/main/Main.css");
-
-/* ----------- The tab component ------------- */
-@import url("./components/tab/Tab.css");
