@@ -1,8 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
+// COMPONENTS
+import "./GlobalStyle.css";
+import Main from "./components/main/Main";
 
 function App() {
-  return <div className="App">welcome to the homepage</div>;
+  return (
+    <div className="App">
+      <Main />
+    </div>
+  );
 }
 
 export default App;

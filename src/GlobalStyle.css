@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "monospace";
+  font-weight: 400;
+}
+
+/* Global styles */
+:root {
+  /* colors */
+  --whiteColor: #fff;
+  --primaryColor: #2196f3;
+  --secondaryColor: #ff6a67;
+  --tetiaryColor: #ffcc00;
+  --blackColor: #4a4a4a;
+  --lightColor: #eff1f4;
+  --deepColor: #a0b0b9;
+  --tagColor: #8bc34a;
+
+  /* box-shadow */
+  --boxShadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Linking styles globally */
+
+/* ----------- The main component ------------- */
+@import url("./components/main/Main.css");
+
+/* ----------- The tab component ------------- */
+@import url("./components/tab/Tab.css");

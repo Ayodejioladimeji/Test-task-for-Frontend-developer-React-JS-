@@ -1,0 +1,14 @@
+.main {
+  background: var(--whiteColor);
+  height: 500px;
+  box-shadow: var(--boxShadow);
+  border-radius: 10px;
+  width: 70%;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.main h1 {
+  margin-bottom: 25px;
+}

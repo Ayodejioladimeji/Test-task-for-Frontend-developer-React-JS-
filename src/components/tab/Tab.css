@@ -1,0 +1,92 @@
+.tabcontainer {
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--whiteColor);
+  width: 100%;
+}
+
+.tabcenter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bloctabs {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+  transition: var(--transition);
+}
+
+.bloctabs button {
+  width: 410px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  text-align: center;
+  background: var(--whiteColor);
+  padding: 15px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--blackColor);
+  border: 1px solid #d9d9d9;
+}
+
+.bloctabs button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.bloctabs button:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.bloctabs .tabs {
+  color: var(--non-active);
+}
+
+.bloctabs .activetab {
+  color: var(--whiteColor);
+  background: var(--primaryColor);
+}
+
+/* ================================================= */
+/* THE SECTION OF THE CONTENT */
+.contenttabs {
+  flex-grow: 1;
+}
+
+.content {
+  background: none;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+#content {
+  background: none;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.content h2 {
+  padding: 0px 0 5px 0px;
+  font-size: 18px;
+}
+
+.content p {
+  width: 100%;
+  height: 100%;
+}
+
+.activecontent {
+  display: block;
+  background: none;
+  padding: 20px 0;
+  width: 100%;
+  height: 100%;
+}
