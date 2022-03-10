@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { GLOBALTYPES } from "./../../redux/actions/globalTypes";
 
 const Tab = () => {
-  const [toggleState, setToggleState] = useState(1);
-
-  const toggleTab = (index) => {
-    setToggleState(index);
-  };
+  const { tab } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   return (
     <div className="tabcontainer">
@@ -13,29 +12,29 @@ const Tab = () => {
         {/* THE SECTION OF THE TABS */}
         <div className="bloctabs">
           <button
-            className={toggleState === 1 ? "activetab" : "tabs"}
-            onClick={() => toggleTab(1)}
+            className={tab === 1 ? "activetab" : "tabs"}
+            onClick={() => dispatch({ type: GLOBALTYPES.TAB, payload: 1 })}
           >
             Last hour
           </button>
 
           <button
-            className={toggleState === 2 ? "activetab" : "tabs"}
-            onClick={() => toggleTab(2)}
+            className={tab === 2 ? "activetab" : "tabs"}
+            onClick={() => dispatch({ type: GLOBALTYPES.TAB, payload: 2 })}
           >
             Today
           </button>
 
           <button
-            className={toggleState === 3 ? "activetab" : "tabs"}
-            onClick={() => toggleTab(3)}
+            className={tab === 3 ? "activetab" : "tabs"}
+            onClick={() => dispatch({ type: GLOBALTYPES.TAB, payload: 3 })}
           >
             Yesterday
           </button>
 
           <button
-            className={toggleState === 4 ? "activetab" : "tabs"}
-            onClick={() => toggleTab(4)}
+            className={tab === 4 ? "activetab" : "tabs"}
+            onClick={() => dispatch({ type: GLOBALTYPES.TAB, payload: 4 })}
           >
             Last 3 days
           </button>
@@ -43,19 +42,17 @@ const Tab = () => {
 
         {/* THE SECTION OF THE CONTENT */}
         <div className="contenttabs">
-          <div className={toggleState === 1 ? "activecontent" : "content"}>
+          <div className={tab === 1 ? "activecontent" : "content"}>
             Last hour
           </div>
 
-          <div className={toggleState === 2 ? "activecontent" : "content"}>
-            Today
-          </div>
+          <div className={tab === 2 ? "activecontent" : "content"}>Today</div>
 
-          <div className={toggleState === 3 ? "activecontent" : "content"}>
+          <div className={tab === 3 ? "activecontent" : "content"}>
             Yesterday
           </div>
 
-          <div className={toggleState === 4 ? "activecontent" : "content"}>
+          <div className={tab === 4 ? "activecontent" : "content"}>
             Last 3days
           </div>
         </div>
