@@ -2,10 +2,11 @@ import React from "react";
 
 // PACKAGES
 import { useSelector, useDispatch } from "react-redux";
-import Today from "../today/Today";
 
 // COMPONENTS
 import Yesterday from "../yesterday/Yesterday";
+import Today from "../today/Today";
+import LastHour from "../lastHour/LastHour";
 import { GLOBALTYPES } from "./../../redux/actions/globalTypes";
 import "./Tab.css";
 
@@ -50,7 +51,7 @@ const Tab = () => {
         {/* THE SECTION OF THE CONTENT */}
         <div className="contenttabs">
           <div className={tab === 1 ? "activecontent" : "content"}>
-            Last hour
+            <LastHour />
           </div>
 
           <div className={tab === 2 ? "activecontent" : "content"}>

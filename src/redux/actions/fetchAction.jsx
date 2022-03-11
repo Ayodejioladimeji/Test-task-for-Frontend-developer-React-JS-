@@ -1,3 +1,6 @@
 import { GLOBALTYPES } from "./globalTypes";
 
-export const getData = () => async (dispatch) => {};
+// passing the data
+export const fetchData = (data) => (dispatch) => {
+  dispatch({ type: GLOBALTYPES.FETCHDATA, payload: data });
+};

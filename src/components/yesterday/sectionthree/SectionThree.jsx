@@ -1,9 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import click from "../../../assets/click.png";
 import "./SectionThree.css";
 
 const SectionTwo = () => {
+  const { fetch } = useSelector((state) => state);
+
+  // destructuring from fetch
+  const { data } = fetch;
+  console.log(data[0].data);
+
   return (
     <>
       <div className="section-three-left">
@@ -19,7 +26,7 @@ const SectionTwo = () => {
           </div>
 
           <div className="right-one-box">
-            <h3>243</h3>
+            <h3>{data[0].data[0].clicks_current_yesterday}</h3>
             <div className="">Yesterday</div>
           </div>
 
@@ -30,7 +37,7 @@ const SectionTwo = () => {
         </div>
 
         <div className="right-two">
-          <h3>CTR: 0.04%</h3>
+          <h3>CTR: {data[0].data[0].ctr_yesterday.toFixed(2)}%</h3>
           <p>Conversion from searches to clicks on all devices.</p>
           <small>
             Help: <span>CTR, Cliks</span>

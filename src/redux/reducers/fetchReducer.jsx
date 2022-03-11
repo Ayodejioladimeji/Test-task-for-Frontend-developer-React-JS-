@@ -7,13 +7,11 @@ const initialState = {
 const fetchReducer = (state = initialState, action) => {
   const { type, payload } = action;
 
-  console.log(state.data);
-
   switch (type) {
     case GLOBALTYPES.FETCHDATA:
       return {
         ...state,
-        data: [...state.data, payload],
+        data: payload,
       };
 
     default:

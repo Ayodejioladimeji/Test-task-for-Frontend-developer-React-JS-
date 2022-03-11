@@ -1,31 +1,38 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 // COMPONENTS
 import "./SectionOne.css";
 
 const SectionOne = () => {
+  const { fetch } = useSelector((state) => state);
+
+  // destructuring from fetch
+  const { data } = fetch;
+  console.log(data[0].data);
+
   return (
     <>
       <div className="section-one-box">
         <div className="box">
           <div className="circle"></div>
           <div className="contents">
-            <h2>Errors: 0.12%</h2>
-            <p>Average: 0.11%</p>
+            <h2>Errors: {data[0].data[0].errors_yesterday.toFixed(1)}%</h2>
+            <p>Average: {data[0].data[0].avg_price_yesterday.toFixed(1)}%</p>
           </div>
         </div>
         <div className="box">
           <div className="circle"></div>
           <div className="contents">
-            <h2>Zeroes: 5.12%</h2>
-            <p>Average: 0.11%</p>
+            <h2>Zeroes: {data[0].data[0].zeroes_yesterday.toFixed(1)}%</h2>
+            <p>Average: {data[0].data[0].avg_price_yesterday.toFixed(1)}%</p>
           </div>
         </div>
         <div className="box">
           <div className="circle"></div>
           <div className="contents">
-            <h2>Timeouts: 0.12%</h2>
-            <p>Average: 0.11%</p>
+            <h2>Timeouts: {data[0].data[0].timeout_yesterday.toFixed(1)}%</h2>
+            <p>Average: {data[0].data[0].avg_price_yesterday.toFixed(1)}%</p>
           </div>
         </div>
       </div>
@@ -40,11 +47,18 @@ const SectionOne = () => {
       <div className="error-code">
         <div className="code-box">
           <div className="code-one"></div>
-          <div className="code-name">Error 500: 1256</div>
+          <div className="code-name">
+            Error
+            {data[0].errors_yesterday[0].code} :
+            {data[0].errors_yesterday[0].count}
+          </div>
         </div>
         <div className="code-box">
           <div className="code-two"></div>
-          <div className="code-name">Error 501: 800</div>
+          <div className="code-name">
+            Error {data[0].errors_yesterday[1].code} :
+            {data[0].errors_yesterday[1].count}
+          </div>
         </div>
         <div className="code-box">
           <div className="code-three"></div>
