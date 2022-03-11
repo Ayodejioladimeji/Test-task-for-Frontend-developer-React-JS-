@@ -10,7 +10,8 @@ const SectionTwo = () => {
 
   // destructuring from fetch
   const { data } = fetch;
-  console.log(data[0].data);
+
+  if (data.length === 0) return null;
 
   return (
     <>
@@ -26,7 +27,7 @@ const SectionTwo = () => {
             <div className="tag">+5%</div>
           </div>
           <div className="right-one-box">
-            <h3>{data[0].data[0].searches_current_last_hour}</h3>
+            {/* <h3>{data[0].data[0].searches_current_last_hour}</h3> */}
             <div className="">Yesterday</div>
           </div>
           <div className="right-one-box">
@@ -37,9 +38,9 @@ const SectionTwo = () => {
 
         <div className="right-two">
           <h3>
-            Mobile traffic: {Math.ceil(data[0].data[0].mobile_pessimizer)}%
+            {/* Mobile traffic: {Math.ceil(data[0].data[0].mobile_pessimizer)}% */}
           </h3>
-          <h3>Web traffic: {Math.ceil(data[0].data[0].web_pessimizer)}%</h3>
+          {/* <h3>Web traffic: {Math.ceil(data[0].data[0].web_pessimizer)}%</h3> */}
           <p>You get 100% traffic on mobile and desktop devices.</p>
           <small>
             Help: <span>Searches, Pessimisation</span>
