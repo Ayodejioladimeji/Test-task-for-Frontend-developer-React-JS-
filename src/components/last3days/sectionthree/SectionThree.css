@@ -1,0 +1,91 @@
+/* SECTION TWO */
+.section-three {
+  display: flex;
+  margin-top: 50px;
+}
+
+/* SECTION TWO LEFT */
+.section-three-left {
+  position: relative;
+  margin-right: 25px;
+}
+
+.section-three-left .left-active {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  border: 1px solid var(--whiteColor);
+  height: 13px;
+  width: 13px;
+  background: var(--secondaryColor);
+  border-radius: 50%;
+}
+
+/* SECTION TWO RIGHT */
+
+.section-three-right {
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--lightColor);
+  justify-content: space-between;
+  width: 70%;
+}
+
+.section-three-right .right-one-box {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.section-three-right .right-one-box .tag {
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--secondaryColor);
+  color: var(--whiteColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-three-right .right-one-box h4 {
+  font-size: 16px;
+  color: var(--secondaryColor);
+  margin-right: 10px;
+}
+
+.section-three-right .right-one-box h3 {
+  font-size: 20px;
+  color: var(--blackColor);
+  margin-right: 10px;
+  font-weight: normal;
+}
+
+.section-three-right .right-one-box .deep {
+  color: var(--deepColor);
+}
+
+/* RIGHT TWO */
+
+.section-three-right .right-two {
+  margin-right: 14px;
+}
+
+.section-three-right .right-two h3 {
+  font-size: 16px;
+  color: var(--secondaryColor);
+  margin-bottom: 10px;
+}
+
+.section-three-right .right-two p {
+  margin-bottom: 10px;
+  color: var(--deepColor);
+}
+
+.section-three-right .right-two small {
+  font-size: 13px;
+}
+
+.section-three-right .right-two small span {
+  color: var(--primaryColor);
+}

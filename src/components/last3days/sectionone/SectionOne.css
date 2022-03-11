@@ -1,0 +1,114 @@
+.section-one-box {
+  /* border: 1px solid var(--deepColor); */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-one-box .box {
+  display: flex;
+}
+
+.section-one-box .box .circle {
+  background: var(--tagColor);
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.box .contents h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--blackColor);
+}
+
+.box .contents p {
+  color: var(--deepColor);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* THE SECTION OF THE PROGRESS */
+.progress {
+  height: 5px;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.progress .error-one {
+  background: var(--tetiaryColor);
+  height: 10px;
+  width: 25%;
+  border-radius: 10px 0 0 10px;
+  border-right: 2px solid var(--whiteColor);
+}
+
+.progress .error-two {
+  background: var(--blueColor);
+  height: 10px;
+  width: 25%;
+  border-right: 2px solid var(--whiteColor);
+}
+
+.progress .error-three {
+  background: var(--primaryColor);
+  height: 10px;
+  width: 25%;
+  border-right: 2px solid var(--whiteColor);
+}
+
+.progress .error-other {
+  background: var(--deepColor);
+  height: 10px;
+  width: 25%;
+  border-radius: 0 10px 10px 0;
+}
+
+/* THE SECTION OF THE ERROR CODE */
+.error-code {
+  display: flex;
+  margin: 25px 0;
+}
+
+.error-code .code-box {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.error-code .code-one {
+  height: 13px;
+  width: 13px;
+  border-radius: 3px;
+  background: var(--tetiaryColor);
+  margin-right: 7px;
+}
+
+.error-code .code-two {
+  height: 13px;
+  width: 13px;
+  border-radius: 3px;
+  background: var(--blueColor);
+  margin-right: 7px;
+}
+
+.error-code .code-three {
+  height: 13px;
+  width: 13px;
+  border-radius: 3px;
+  background: var(--primaryColor);
+  margin-right: 7px;
+}
+
+.error-code .code-other {
+  height: 13px;
+  width: 13px;
+  border-radius: 3px;
+  background: var(--deepColor);
+  margin-right: 7px;
+}

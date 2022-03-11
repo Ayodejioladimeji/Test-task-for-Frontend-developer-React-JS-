@@ -25,7 +25,7 @@ const SectionFour = () => {
             <div className="tag">+5%</div>
           </div>
           <div className="right-one-box">
-            <h3>{data[0].data[0].searches_previous_last_hour}</h3>
+            <h3>{data[0].data[0].searches_previous_last_3days}</h3>
             <div className="">Yesterday</div>
           </div>
           <div className="right-one-box">
@@ -35,7 +35,7 @@ const SectionFour = () => {
         </div>
 
         <div className="right-two">
-          <h3>STR:0% </h3>
+          <h3>STR:{data[0].data[0].str_last_3days.toFixed(2)}% </h3>
           <h3>Avg. Check: 8,903</h3>
           <p>Conversion from cliks to bookings on all devices..</p>
           <small>

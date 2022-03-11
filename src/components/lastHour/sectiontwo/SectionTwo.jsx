@@ -26,7 +26,7 @@ const SectionTwo = () => {
             <div className="tag">+5%</div>
           </div>
           <div className="right-one-box">
-            <h3>{data[0].data[0].searches_current_yesterday}</h3>
+            <h3>{data[0].data[0].searches_current_last_hour}</h3>
             <div className="">Yesterday</div>
           </div>
           <div className="right-one-box">

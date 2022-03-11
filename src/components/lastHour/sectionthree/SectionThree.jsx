@@ -26,7 +26,7 @@ const SectionTwo = () => {
           </div>
 
           <div className="right-one-box">
-            <h3>{data[0].data[0].clicks_current_yesterday}</h3>
+            <h3>{data[0].data[0].clicks_current_last_hour}</h3>
             <div className="">Yesterday</div>
           </div>
 
@@ -37,7 +37,7 @@ const SectionTwo = () => {
         </div>
 
         <div className="right-two">
-          <h3>CTR: {data[0].data[0].ctr_yesterday.toFixed(2)}%</h3>
+          <h3>CTR: {data[0].data[0].ctr_last_hour.toFixed(2)}%</h3>
           <p>Conversion from searches to clicks on all devices.</p>
           <small>
             Help: <span>CTR, Cliks</span>

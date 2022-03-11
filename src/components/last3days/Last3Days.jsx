@@ -6,9 +6,9 @@ import SectionTwo from "./sectiontwo/SectionTwo";
 import SectionThree from "./sectionthree/SectionThree";
 import SectionFour from "./sectionfour/SectionFour";
 
-const Today = () => {
+const Last3Days = () => {
   return (
-    <div className="today">
+    <div className="last-three-days">
       <div className="section-one">
         <SectionOne />
       </div>
@@ -31,4 +31,4 @@ const Today = () => {
   );
 };
 
-export default Today;
+export default Last3Days;

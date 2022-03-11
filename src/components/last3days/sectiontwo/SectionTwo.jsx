@@ -1,10 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 // COMPONENTS
 import funnel from "../../../assets/funnel.png";
 import "./SectionTwo.css";
 
 const SectionTwo = () => {
+  const { fetch } = useSelector((state) => state);
+
+  // destructuring from fetch
+  const { data } = fetch;
+  console.log(data[0].data);
+
   return (
     <>
       <div className="section-two-left">
@@ -19,7 +26,7 @@ const SectionTwo = () => {
             <div className="tag">+5%</div>
           </div>
           <div className="right-one-box">
-            <h3>29,380</h3>
+            <h3>{data[0].data[0].searches_current_last_3days}</h3>
             <div className="">Yesterday</div>
           </div>
           <div className="right-one-box">
@@ -29,8 +36,10 @@ const SectionTwo = () => {
         </div>
 
         <div className="right-two">
-          <h3>Mobile traffic: 100%</h3>
-          <h3>Web traffic: 100%</h3>
+          <h3>
+            Mobile traffic: {Math.ceil(data[0].data[0].mobile_pessimizer)}%
+          </h3>
+          <h3>Web traffic: {Math.ceil(data[0].data[0].web_pessimizer)}%</h3>
           <p>You get 100% traffic on mobile and desktop devices.</p>
           <small>
             Help: <span>Searches, Pessimisation</span>

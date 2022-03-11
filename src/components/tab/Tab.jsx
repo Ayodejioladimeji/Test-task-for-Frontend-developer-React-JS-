@@ -9,6 +9,7 @@ import Today from "../today/Today";
 import LastHour from "../lastHour/LastHour";
 import { GLOBALTYPES } from "./../../redux/actions/globalTypes";
 import "./Tab.css";
+import Last3Days from "../last3days/Last3Days";
 
 const Tab = () => {
   const { tab } = useSelector((state) => state);
@@ -63,7 +64,7 @@ const Tab = () => {
           </div>
 
           <div className={tab === 4 ? "activecontent" : "content"}>
-            Last 3days
+            <Last3Days />
           </div>
         </div>
       </div>
