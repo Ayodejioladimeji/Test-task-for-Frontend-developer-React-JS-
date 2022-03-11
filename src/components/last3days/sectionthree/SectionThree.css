@@ -89,3 +89,10 @@
 .section-three-right .right-two small span {
   color: var(--primaryColor);
 }
+
+/* THE SECTION OF THE RESPONSIVENESS */
+@media screen and (max-width: 740px) {
+  .section-three-right {
+    flex-direction: column;
+  }
+}

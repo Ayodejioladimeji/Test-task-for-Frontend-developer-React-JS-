@@ -1,5 +1,4 @@
 .section-one-box {
-  /* border: 1px solid var(--deepColor); */
   height: 100px;
   display: flex;
   align-items: center;
@@ -111,4 +110,18 @@
   border-radius: 3px;
   background: var(--deepColor);
   margin-right: 7px;
+}
+
+/* THE SECTION OF THE RESPONSIVENESS */
+@media screen and (max-width: 600px) {
+  .error-code .code-box {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-one-box {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
 }

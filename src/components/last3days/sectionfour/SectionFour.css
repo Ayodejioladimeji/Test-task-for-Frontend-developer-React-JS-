@@ -91,3 +91,10 @@
 .section-four-right .right-two small span {
   color: var(--primaryColor);
 }
+
+/* THE SECTION OF THE RESPONSIVENESS */
+@media screen and (max-width: 740px) {
+  .section-four-right {
+    flex-direction: column;
+  }
+}
