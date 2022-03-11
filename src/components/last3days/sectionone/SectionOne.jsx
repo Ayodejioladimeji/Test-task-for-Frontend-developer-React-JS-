@@ -9,7 +9,8 @@ const SectionOne = () => {
 
   // destructuring from fetch
   const { data } = fetch;
-  console.log(data[0].data);
+
+  if (data.length === 0) return null;
 
   return (
     <>
